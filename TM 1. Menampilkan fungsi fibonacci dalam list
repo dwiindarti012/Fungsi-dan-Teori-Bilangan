@@ -1,0 +1,13 @@
+#modifikasi fungsi fibonacci dengan menampilkan hasil dalam list
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+#simpan hasil ke dalam list
+hasil = []
+for i in range(5):
+    hasil.append(fibonacci(i))
+
+print("list fibonacci", hasil)
