@@ -1,0 +1,18 @@
+#tanpa Numpy
+def f(x):
+    return 3 * x**2 + 2 * x + 1
+
+# hitung untuk x = 0, 1, 2, 3, 4
+for i in range(5):
+    print(f"x = {i},f(x) = {f(i)}")
+
+#dengan Numpy
+import numpy as np
+
+# Buat array x
+x = np.array([0, 1, 2, 3, 4])
+
+# Hitung langsung dengan operasi vektor
+f = 3 * x**2 + 2 * x + 1
+
+print(f)
