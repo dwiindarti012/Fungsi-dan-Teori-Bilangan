@@ -1,0 +1,23 @@
+def bilangan_prima_sampai(n):
+    # List untuk menampung semua bilangan prima yang ditemukan
+    daftar_prima = []
+
+    # Mengecek setiap angka mulai dari 2 sampai n
+    for angka in range(2, n + 1):
+        prima = True  # asumsikan angka ini prima dulu
+
+        # cek apakah angka punya pembagi selain 1 dan dirinya sendiri
+        for pembagi in range(2, int(angka**0.5) + 1):
+            if angka % pembagi == 0:
+                prima = False
+                break  
+
+        # penambahan hasil bilangan prima ke list
+        if prima:
+            daftar_prima.append(angka)
+
+    return daftar_prima
+
+#keluaran fungsi
+batas = int(input("Masukkan batas bilangan: "))
+print(f"Bilangan prima dari 1 sampai {batas}: {bilangan_prima_sampai(batas)}")
