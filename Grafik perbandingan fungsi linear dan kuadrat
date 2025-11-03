@@ -1,0 +1,25 @@
+#Visualisasi garfik fungsi linear dan kuadrat
+import numpy as np
+import matplotlib.pyplot as plt
+
+def f_linear(x):
+    return 2*x + 3
+
+def f_kuadrat(x):
+    return x**2 + 2*x + 1
+
+# Membuat 50 titik dari -10 sampai 10
+x = np.linspace(-10, 10, 50)
+
+# Plot kedua fungsi
+plt.plot(x, f_linear(x), label="Linear: 2x + 3")
+plt.plot(x, f_kuadrat(x), label="Kuadrat: x² + 2x + 1")
+
+# Memberi judul dan label
+plt.title("Perbandingan Fungsi Linear dan Kuadrat")
+plt.xlabel("x")
+plt.ylabel("f(x)")
+plt.legend()
+plt.grid(True)
+
+plt.show()
