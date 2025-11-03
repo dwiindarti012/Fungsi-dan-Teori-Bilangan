@@ -1,0 +1,8 @@
+#menentukan bilangan ganjil atau genap
+def ganjil_genap(n):
+    if n % 2 == 0:
+      return "Genap"
+    else:
+       return "ganjil"
+bil = int(input("masukkan bilangan:"))
+print(f"{bil} adalah bilangan {ganjil_genap(bil)}")
